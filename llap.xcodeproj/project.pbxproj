@@ -154,7 +154,7 @@
 				TargetAttributes = {
 					269C73A61C7594AE00AF3CB5 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = T3PD9WT28P;
+						DevelopmentTeam = 8TKWD94JH9;
 					};
 				};
 			};
@@ -163,6 +163,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -310,11 +311,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T3PD9WT28P;
+				DEVELOPMENT_TEAM = 8TKWD94JH9;
 				INFOPLIST_FILE = llap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nju.cs.weiwang.llap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jswny.llap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -323,11 +324,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = T3PD9WT28P;
+				DEVELOPMENT_TEAM = 8TKWD94JH9;
 				INFOPLIST_FILE = llap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.nju.cs.weiwang.llap;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jswny.llap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
