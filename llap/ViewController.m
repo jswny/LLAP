@@ -51,17 +51,15 @@ int lastTime = 0;
 - (void)performDisUpdate:(NSNotification *)notification
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-    
-    int tempdis=(int) audioController.audiodistance/DISPLAY_SCALE;
+        int tempdis=(int) audioController.audiodistance/DISPLAY_SCALE;
         if ((audioController.audiodistance-lastTime)>5) {
             _gesture.text = @"Play next";
         }
-     _slider.value=(audioController.audiodistance-DISPLAY_SCALE*tempdis)/DISPLAY_SCALE;
+        _slider.value=(audioController.audiodistance-DISPLAY_SCALE*tempdis)/DISPLAY_SCALE;
         NSString* myNewString = [NSString stringWithFormat:@"%.01f", audioController.audiodistance];
         _distanceRead.text=myNewString;
         lastTime = audioController.audiodistance;
-    }
-        );
+    });
 
 }
 
