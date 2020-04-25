@@ -34,19 +34,19 @@ int lastTime = 0;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(performDisUpdate:) name:@"AudioDisUpdate" object:nil];
     [_slider setValue: 0.0];
     [_distanceRead setText: @"0"];
-    _gesture.text = @"Ready for Playing Music";
+    _gesture.text = @"Ready!";
     [self.view addSubview: _slider];
 }
 - (IBAction)playbutton:(UIButton *)sender {
     [musicPlayer play];
-    _gesture.text = @"Ready for Controlling Music Playing";
+    _gesture.text = @"Ready to control music!";
     audioController.audiodistance=0;
     [audioController startIOUnit];
     
 }
 - (IBAction)stopbutton:(UIButton *)sender {
     [musicPlayer stop];
-    _gesture.text = @"Ready for Playing Music";
+    _gesture.text = @"Ready to play music!";
     [audioController stopIOUnit];
 }
 
@@ -59,14 +59,19 @@ int lastTime = 0;
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         int tempdis=(int) audioController.audiodistance/DISPLAY_SCALE;
-        if ((audioController.audiodistance-lastTime)>5) {
-            _gesture.text = @"Music Paused";
-//            [musicPlayer pause];
-        }
+
         _slider.value=(audioController.audiodistance-DISPLAY_SCALE*tempdis)/DISPLAY_SCALE;
         NSString* myNewString = [NSString stringWithFormat:@"%.01f", audioController.audiodistance];
         _distanceRead.text=myNewString;
-        lastTime = audioController.audiodistance;
+//        lastTime = audioController.audiodistance;
+        
+        if (audioController.audiodistance > 50) {
+            _gesture.text = @"Paused music!";
+            [musicPlayer pause];
+        } else if (audioController.audiodistance < 50) {
+            _gesture.text = @"Playing music!";
+            [musicPlayer play];
+        }
     });
 
 }
