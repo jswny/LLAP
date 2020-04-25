@@ -63,7 +63,6 @@ int lastTime = 0;
         _slider.value=(audioController.audiodistance-DISPLAY_SCALE*tempdis)/DISPLAY_SCALE;
         NSString* myNewString = [NSString stringWithFormat:@"%.01f", audioController.audiodistance];
         _distanceRead.text=myNewString;
-//        lastTime = audioController.audiodistance;
         
         if (audioController.audiodistance > 50) {
             _gesture.text = @"Paused music!";
