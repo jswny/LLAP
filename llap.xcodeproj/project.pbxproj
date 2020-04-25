@@ -16,6 +16,9 @@
 		269C73B51C7594AE00AF3CB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269C73B31C7594AE00AF3CB5 /* Main.storyboard */; };
 		269C73B71C7594AE00AF3CB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269C73B61C7594AE00AF3CB5 /* Assets.xcassets */; };
 		269C73BA1C7594AE00AF3CB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269C73B81C7594AE00AF3CB5 /* LaunchScreen.storyboard */; };
+		D877B1AA2454001800F69796 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D877B1A92454001800F69796 /* AVFoundation.framework */; };
+		D877B1AD2454006F00F69796 /* summer.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D877B1AB2454006F00F69796 /* summer.mp3 */; };
+		D877B1AE2454006F00F69796 /* summer.m4a in Resources */ = {isa = PBXBuildFile; fileRef = D877B1AC2454006F00F69796 /* summer.m4a */; };
 		E1854A7F1ECDD02C00860993 /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1854A7C1ECDD02C00860993 /* AudioController.mm */; };
 		E1854A801ECDD02C00860993 /* RangeFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1854A7D1ECDD02C00860993 /* RangeFinder.cpp */; };
 /* End PBXBuildFile section */
@@ -38,6 +41,9 @@
 		269C73B61C7594AE00AF3CB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		269C73B91C7594AE00AF3CB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		269C73BB1C7594AE00AF3CB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D877B1A92454001800F69796 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D877B1AB2454006F00F69796 /* summer.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = summer.mp3; path = ../../../Downloads/summer.mp3; sourceTree = "<group>"; };
+		D877B1AC2454006F00F69796 /* summer.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = summer.m4a; path = ../../../Downloads/summer.m4a; sourceTree = "<group>"; };
 		E1854A7B1ECDD02C00860993 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = Control/AudioController.h; sourceTree = "<group>"; };
 		E1854A7C1ECDD02C00860993 /* AudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioController.mm; path = Control/AudioController.mm; sourceTree = "<group>"; };
 		E1854A7D1ECDD02C00860993 /* RangeFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RangeFinder.cpp; path = Control/RangeFinder.cpp; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D877B1AA2454001800F69796 /* AVFoundation.framework in Frameworks */,
 				2658616D1C830664005334B7 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +82,7 @@
 				2658616C1C830664005334B7 /* Accelerate.framework */,
 				269C73A91C7594AE00AF3CB5 /* llap */,
 				269C73A81C7594AE00AF3CB5 /* Products */,
+				D877B1A82454001800F69796 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +97,7 @@
 		269C73A91C7594AE00AF3CB5 /* llap */ = {
 			isa = PBXGroup;
 			children = (
+				D877B1A62453F95800F69796 /* Music */,
 				E1854A7A1ECDCFA100860993 /* Control */,
 				267CEFF41C75E7140053593B /* PublicUtility */,
 				269C73AD1C7594AE00AF3CB5 /* AppDelegate.h */,
@@ -110,6 +119,23 @@
 				269C73AB1C7594AE00AF3CB5 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D877B1A62453F95800F69796 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				D877B1AC2454006F00F69796 /* summer.m4a */,
+				D877B1AB2454006F00F69796 /* summer.mp3 */,
+			);
+			name = Music;
+			sourceTree = "<group>";
+		};
+		D877B1A82454001800F69796 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D877B1A92454001800F69796 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E1854A7A1ECDCFA100860993 /* Control */ = {
@@ -183,6 +209,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				269C73BA1C7594AE00AF3CB5 /* LaunchScreen.storyboard in Resources */,
+				D877B1AD2454006F00F69796 /* summer.mp3 in Resources */,
+				D877B1AE2454006F00F69796 /* summer.m4a in Resources */,
 				269C73B71C7594AE00AF3CB5 /* Assets.xcassets in Resources */,
 				269C73B51C7594AE00AF3CB5 /* Main.storyboard in Resources */,
 			);

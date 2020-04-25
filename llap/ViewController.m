@@ -27,7 +27,7 @@ int lastTime = 0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    NSString *file = [NSString stringWithFormat:@"%@/summer.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSString *file = [NSString stringWithFormat:@"%@/summer.m4a", [[NSBundle mainBundle] resourcePath]];
     NSURL *music = [NSURL fileURLWithPath:file];
     musicPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL: music error: nil];
     audioController = [[AudioController alloc] init];
@@ -61,7 +61,7 @@ int lastTime = 0;
         int tempdis=(int) audioController.audiodistance/DISPLAY_SCALE;
         if ((audioController.audiodistance-lastTime)>5) {
             _gesture.text = @"Music Paused";
-            [musicPlayer pause];
+//            [musicPlayer pause];
         }
         _slider.value=(audioController.audiodistance-DISPLAY_SCALE*tempdis)/DISPLAY_SCALE;
         NSString* myNewString = [NSString stringWithFormat:@"%.01f", audioController.audiodistance];
